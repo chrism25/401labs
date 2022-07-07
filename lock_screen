@@ -1,0 +1,10 @@
+if ($args[1] -is [int]) {
+#conditional accepting only integers, 1 in this case
+    $nb = $args[1]
+    #variable set to the 1 minute
+    Write-Output "The screeing is locking up"
+    Start-Sleep -Seconds $nb
+    $lock = $(rundll32.exe user32.dll, LockWorkStation)
+    #place computer to sleep after 1 sminute
+    $lock
+  }
