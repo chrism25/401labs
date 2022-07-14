@@ -1,0 +1,5 @@
+Get-ADDefaultDomainPasswordPolicy -Current LoggedOnUser | Set-ADDefaultDomainPasswordPolicy -ComplexityEnabled $true
+#Enables password complexity on the current domain
+
+Set-SmbServerConfiguration -AuditSmb1Access $false
+#Disables SMB
